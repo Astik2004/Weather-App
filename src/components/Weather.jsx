@@ -35,9 +35,9 @@ const search=async(city)=>{
         return;
     }
     try {
-        //const envurl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${import.meta.env.VITE_APP_KEY}`;
-        const url=`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${"4295055db83cf85a41a467bf1e80b6f1"}`;
-        const response=await fetch(url);
+        const envurl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${import.meta.env.VITE_APP_KEY}`;
+        //const url=`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${"4295055db83cf85a41a467bf1e80b6f1"}`;
+        const response=await fetch(envurl);
         const data=await response.json();
         if(!response.ok){
             alert(data.message);
